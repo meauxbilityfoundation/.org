@@ -1,248 +1,346 @@
 # MAP=MeauxbilityAdminPortal
 
-> Next-generation operations dashboard for Meauxbility & Inner Animals
+# 🏢 Meauxbility Foundation - Corporate Monorepo
 
-A powerful, modular admin platform for managing websites, campaigns, grants, brand assets, and team collaboration across both organizations.
+> **Next-generation operations platform for accessibility, innovation, and social impact**
 
-## 🎯 Features
+[![Live Admin Portal](https://img.shields.io/badge/Live-Admin%20Portal-00D4AA?style=for-the-badge&logo=vercel)](https://iaudodidact.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com/)
 
-- **🔌 Modular Plugin System** - Extensible architecture for unlimited functionality
+---
 
-- **⌘ Command Palette** - Lightning-fast navigation with keyboard shortcuts
+## 🎯 Corporate Overview
 
-- **🐙 GitHub Integration** - Real-time repo tracking and issue management
+**Meauxbility Foundation** is a technology-driven nonprofit focused on accessibility, innovation, and social impact. Our corporate monorepo houses all digital infrastructure, applications, and tools that power our mission.
 
-- **🎨 Brand Lab** - Centralized asset management and design tools
+### 🌐 Live Properties
+- **Admin Portal:** [iaudodidact.com](https://iaudodidact.com/) - Operations dashboard
+- **Nonprofit Site:** [meauxbility.org](https://meauxbility.org) - Public website (migrating to Vercel)
+- **E-commerce:** [inneranimals.com](https://inneranimals.com) - Online store (migrating to Vercel)
+- **Additional Domain:** [meauxxx.com](https://meauxxx.com) - Reserved for future use
 
-- **📊 Analytics Hub** - Cross-platform performance tracking
+---
 
-- **📣 Campaign Manager** - Email, social, and fundraiser coordination
+## 🏗️ Monorepo Structure
 
-- **📝 Grant Hub** - Application pipeline and document management
+```
+meauxbilityfoundation/.org/
+├── 📱 apps/
+│   ├── admin-portal/          # Next.js 14 admin dashboard
+│   ├── meauxbility-org/       # Nonprofit website
+│   ├── inneranimals-shop/     # E-commerce platform
+│   └── api-gateway/           # Centralized API services
+├── 🛠️ packages/
+│   ├── ui-components/         # Shared React components
+│   ├── database-schemas/      # Supabase migrations
+│   ├── auth-system/           # Authentication & RBAC
+│   ├── asset-manager/         # Google Drive + Cloudflare R2
+│   └── ai-integrations/       # OpenAI, Claude, Analytics
+├── 🔧 tools/
+│   ├── deployment/            # Vercel configs
+│   ├── monitoring/            # Performance tracking
+│   └── automation/            # CI/CD scripts
+└── 📚 docs/
+    ├── api-documentation/     # API references
+    ├── deployment-guides/     # Setup instructions
+    └── corporate-policies/    # Governance docs
+```
 
-- **🏗️ Website Builder** - Component library and deployment tools
+---
 
-- **👥 Real-time Collaboration** - Live updates and team activity feeds
+## 🚀 Current Status
 
-## 🚀 Tech Stack
+### ✅ Production Ready
+- **Admin Portal** - Live at [iaudodidact.com](https://iaudodidact.com/)
+  - Next.js 14 with App Router
+  - Supabase backend (PostgreSQL, Auth, Real-time)
+  - 7 functional modules (GitHub, Brand Lab, Analytics, etc.)
+  - Role-based access control (Admin, CTO, CMO, Members)
+  - Secure API routes for external integrations
+
+### 🔄 In Migration
+- **meauxbility.org** - Moving from Render to Vercel
+- **inneranimals.com** - Moving from current host to Vercel
+- **Asset Management** - Google Drive + Cloudflare R2 integration
+
+### 📋 Planned
+- **AI-Powered Workflows** - OpenAI + Claude integration
+- **Advanced Analytics** - Google Analytics + custom metrics
+- **Payment Processing** - Stripe integration
+- **Team Collaboration** - Real-time features
+
+---
+
+## 🛠️ Technology Stack
 
 ### Frontend
-
-- **React** - UI framework
-
-- **Tailwind CSS** - Styling
-
-- **Lucide Icons** - Icon system
-
-- **Vite** - Build tool
+- **Next.js 14** (App Router, Server Components)
+- **React 19** (Latest features)
+- **Tailwind CSS** (Utility-first styling)
+- **Lucide Icons** (Icon system)
 
 ### Backend
+- **Supabase** (PostgreSQL, Auth, Storage, Real-time)
+- **Row Level Security** (Data protection)
+- **API Routes** (Secure server-side operations)
 
-- **Supabase** - Database, Auth, Storage, Real-time
+### External Services
+- **GitHub API** (Repository management)
+- **Google Drive API** (Asset management)
+- **Cloudflare R2** (CDN + Storage)
+- **OpenAI API** (AI content generation)
+- **Claude API** (Advanced AI analysis)
+- **Google Analytics** (Performance tracking)
+- **Stripe API** (Payment processing)
 
-- **PostgreSQL** - Relational database
+### Deployment
+- **Vercel** (Hosting platform)
+- **Custom Domains** (iaudodidact.com, meauxbility.org, inneranimals.com)
+- **SSL/HTTPS** (Secure connections)
 
-- **Row Level Security** - Fine-grained access control
+---
 
-### Integrations
+## 👥 Team Structure
 
-- **GitHub API** - Repository and issue tracking
+### Leadership
+- **Sam** (CEO) - `sam@meauxbility.org` - Full admin access
+- **Fred Williams** (CMO) - `fred@meauxbility.org` - Marketing & campaigns
+- **Connor McNeely** (CTO) - `connor@meauxbility.org` - Technical operations
 
-- **Google Analytics** - Traffic and conversion tracking
+### Access Levels
+- **Admin** - Full system access, user management, API keys
+- **CTO** - Technical operations, GitHub integration, deployments
+- **CMO** - Marketing tools, campaigns, analytics
+- **Members** - Basic access, content creation
 
-- **Stripe API** - Payment and donation processing
+---
 
-- **Anthropic Claude API** - AI-powered assistance
+## 🔑 Environment Variables
 
-## 📁 Project Structure
+### Required for All Apps
+```bash
+# Supabase (Core Backend)
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+SUPABASE_SERVICE_ROLE=...
 
+# GitHub Integration
+GITHUB_TOKEN=...
+
+# AI Services
+OPENAI_API_KEY=...
+ANTHROPIC_API_KEY=...
+
+# Google Services
+GOOGLE_CLIENT_ID=...
+GOOGLE_CLIENT_SECRET=...
+NEXT_PUBLIC_GA_MEASUREMENT_ID=...
+
+# Cloudflare R2 (Asset Storage)
+CLOUDFLARE_ACCOUNT_ID=...
+CLOUDFLARE_ACCESS_KEY_ID=...
+CLOUDFLARE_SECRET_ACCESS_KEY=...
+CLOUDFLARE_R2_BUCKET=meauxbility-assets
+CLOUDFLARE_R2_PUBLIC_URL=https://assets.iaudodidact.com
+
+# Stripe (Payments)
+STRIPE_PUBLISHABLE_KEY=...
+STRIPE_SECRET_KEY=...
 ```
-meauxbility-admin-portal/
-├── src/
-│   ├── components/           # Reusable UI components
-│   │   ├── CommandPalette.jsx
-│   │   ├── StatCard.jsx
-│   │   ├── ActionCard.jsx
-│   │   └── Dashboard.jsx
-│   ├── modules/              # Feature modules (plugins)
-│   │   ├── GitHub/
-│   │   ├── WebsiteBuilder/
-│   │   ├── BrandLab/
-│   │   ├── Analytics/
-│   │   ├── Campaigns/
-│   │   └── Grants/
-│   ├── lib/                  # Utilities and configs
-│   │   ├── supabase.js
-│   │   ├── github.js
-│   │   ├── utils.js
-│   │   └── plugins.js
-│   ├── hooks/                # Custom React hooks
-│   │   ├── useAuth.js
-│   │   ├── useRealtime.js
-│   │   └── useAnalytics.js
-│   ├── App.jsx               # Main app component
-│   ├── main.jsx              # Entry point
-│   └── index.css             # Global styles
-├── public/
-├── supabase/
-│   └── migrations/           # Database migrations (future)
-├── env.example               # Environment variables template
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
-```
 
-## 🛠️ Setup
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
-
 - Node.js 18+
-- npm or yarn
+- Git
+- Vercel CLI (optional)
 - Supabase account
-- GitHub Personal Access Token (optional, for private repos)
 
-### Installation
-
-1. **Clone the repository**
-
+### Development Setup
 ```bash
-git clone git@github.com:meauxbility/meauxbility-admin-portal.git
-cd meauxbility-admin-portal
-```
+# Clone repository
+git clone https://github.com/meauxbilityfoundation/.org.git
+cd .org
 
-2. **Install dependencies**
-
-```bash
+# Install dependencies
 npm install
-```
 
-3. **Set up environment variables**
+# Set up environment variables
+cp .env.example .env.local
+# Edit .env.local with your keys
 
-Copy the environment template and add your credentials:
-
-```bash
-cp env.example .env
-```
-
-Edit `.env` with your credentials:
-
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-VITE_GITHUB_TOKEN=your_github_token (optional)
-VITE_GA_MEASUREMENT_ID=your_ga_id
-```
-
-4. **Set up Supabase database**
-
-- Create a new Supabase project
-- Run the schema from `supabase-schema.sql` (if available) or set up your own tables
-- Configure authentication providers
-
-5. **Start development server**
-
-```bash
+# Start development server
 npm run dev
+
+# Visit http://localhost:3000
 ```
 
-Visit `http://localhost:5173` 🚀
-
-## 🔑 Authentication
-
-The portal supports role-based access:
-
-- **Admin** (Sam) - Full access to all features
-- **CTO** (Connor) - Technical tools and GitHub management
-- **CMO** (Fred) - Marketing, campaigns, and analytics
-- **Member** - Limited access based on project collaboration
-
-## 📦 Key Dependencies
-
-```json
-{
-  "react": "^18.3.0",
-  "lucide-react": "^0.460.0",
-  "@supabase/supabase-js": "^2.45.0",
-  "tailwindcss": "^3.4.0"
-}
-```
-
-## 🎨 Design System
-
-The portal uses a consistent design language:
-
-- **Colors**: Gradient-based system with semantic color roles
-- **Typography**: SF Pro Display / System fonts
-- **Spacing**: 4px base unit
-- **Radius**: 12px-24px rounded corners
-- **Shadows**: Layered elevation system
-
-## 🔌 Adding New Modules
-
-1. Create module directory in `src/modules/YourModule/`
-2. Export module component
-3. Register in `src/lib/plugins.js`:
-
-```javascript
-{
-  id: 'yourmodule',
-  name: 'Your Module',
-  icon: YourIcon,
-  color: 'from-blue-500 to-blue-700',
-  component: YourModule
-}
-```
-
-## 🚢 Deployment
-
-### Vercel (Recommended)
-
+### Production Deployment
 ```bash
-npm run build
+# Deploy to Vercel
 vercel --prod
+
+# Or push to main branch (auto-deploys)
+git add .
+git commit -m "Deploy to production"
+git push origin main
 ```
 
-### Netlify
+---
 
-```bash
-npm run build
-netlify deploy --prod --dir=dist
-```
+## 📱 Applications
 
-### Environment Variables
+### 1. Admin Portal (`/apps/admin-portal`)
+**Live:** [iaudodidact.com](https://iaudodidact.com/)
 
-Make sure to set all environment variables in your deployment platform.
+**Features:**
+- 7 functional modules (GitHub, Brand Lab, Analytics, Campaigns, Grants, Website Builder, Settings)
+- Command palette (⌘K) for quick navigation
+- Real-time collaboration
+- Role-based access control
+- Secure API integrations
 
-## 📊 Database Schema
+**Tech:** Next.js 14, Supabase, Tailwind CSS
 
-See `supabase-schema.sql` for the initial schema including:
+### 2. Meauxbility.org (`/apps/meauxbility-org`)
+**Status:** Migrating to Vercel
 
-- User profiles and authentication
-- Sessions and messages (AI conversations)
-- API key management
+**Purpose:** Public nonprofit website
+- Mission and impact stories
+- Donation processing
+- Volunteer opportunities
+- Accessibility resources
 
-Additional tables for projects, campaigns, grants, and analytics will be added as modules are expanded.
+### 3. Inner Animals Shop (`/apps/inneranimals-shop`)
+**Status:** Migrating to Vercel
+
+**Purpose:** E-commerce platform
+- Product catalog
+- Shopping cart
+- Payment processing (Stripe)
+- Order management
+
+---
+
+## 🔧 Development Workflow
+
+### Branch Strategy
+- `main` - Production-ready code
+- `develop` - Integration branch
+- `feature/*` - Feature development
+- `hotfix/*` - Critical fixes
+
+### Code Standards
+- **ESLint** - Code linting
+- **Prettier** - Code formatting
+- **TypeScript** - Type safety (planned)
+- **Conventional Commits** - Commit messages
+
+### Testing
+- **Unit Tests** - Component testing
+- **Integration Tests** - API testing
+- **E2E Tests** - User flow testing (planned)
+
+---
+
+## 📊 Monitoring & Analytics
+
+### Performance Tracking
+- **Vercel Analytics** - Core Web Vitals
+- **Google Analytics** - User behavior
+- **Custom Metrics** - Business KPIs
+
+### Error Monitoring
+- **Vercel Error Tracking** - Runtime errors
+- **Supabase Logs** - Database issues
+- **Custom Alerts** - Critical failures
+
+---
+
+## 🔒 Security
+
+### Data Protection
+- **Row Level Security** (RLS) in Supabase
+- **API Key Encryption** - Stored securely
+- **OAuth 2.0** - Secure authentication
+- **HTTPS Everywhere** - Encrypted connections
+
+### Access Control
+- **Role-based permissions** - Granular access
+- **API rate limiting** - Abuse prevention
+- **Input validation** - XSS protection
+- **CORS configuration** - Cross-origin security
+
+---
+
+## 📚 Documentation
+
+### API Documentation
+- [Admin Portal API](./docs/api-documentation/admin-portal.md)
+- [Supabase Schema](./docs/api-documentation/supabase-schema.md)
+- [External Integrations](./docs/api-documentation/external-apis.md)
+
+### Deployment Guides
+- [Vercel Setup](./docs/deployment-guides/vercel-setup.md)
+- [Environment Variables](./docs/deployment-guides/environment-variables.md)
+- [Domain Configuration](./docs/deployment-guides/domains.md)
+
+### Corporate Policies
+- [Code of Conduct](./docs/corporate-policies/code-of-conduct.md)
+- [Security Guidelines](./docs/corporate-policies/security.md)
+- [Access Control](./docs/corporate-policies/access-control.md)
+
+---
 
 ## 🤝 Contributing
 
-This is a private repository for the Meauxbility team. If you're a team member:
+### For Team Members
+1. **Fork** the repository
+2. **Create** a feature branch
+3. **Make** your changes
+4. **Test** thoroughly
+5. **Submit** a pull request
 
-1. Create a feature branch (`git checkout -b feature/amazing-feature`)
-2. Commit your changes (`git commit -m 'Add amazing feature'`)
-3. Push to the branch (`git push origin feature/amazing-feature`)
-4. Open a Pull Request
+### For External Contributors
+1. **Read** our Code of Conduct
+2. **Check** open issues
+3. **Fork** and contribute
+4. **Follow** our coding standards
 
-## 🔐 Security
+---
 
-- All sensitive data is stored securely in Supabase
-- Row Level Security (RLS) enforces access control
-- API keys are never committed to the repository
-- All external API calls use environment variables
+## 📞 Support
 
-## 📝 License
+### Technical Issues
+- **GitHub Issues** - Bug reports and feature requests
+- **Slack** - Team communication
+- **Email** - `tech@meauxbility.org`
 
-Private - © 2024 Meauxbility 501(c)(3) & Inner Animals
+### Business Inquiries
+- **Email** - `info@meauxbility.org`
+- **Website** - [meauxbility.org](https://meauxbility.org)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 🎯 Mission Statement
+
+**Meauxbility Foundation** is committed to creating accessible, innovative technology solutions that empower individuals and communities. Through our corporate monorepo, we maintain the highest standards of code quality, security, and user experience while advancing our mission of social impact through technology.
+
+---
+
+**Built with ❤️ by the Meauxbility Foundation Team**
+
+*Last updated: December 2024*
 
 ## 👥 Team
 
