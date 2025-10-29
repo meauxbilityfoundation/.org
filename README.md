@@ -2,6 +2,8 @@
 
 # 🏢 Meauxbility Foundation - Corporate Monorepo
 
+> # 🏢 Meauxbility Foundation - Corporate Monorepo
+
 > **Next-generation operations platform for accessibility, innovation, and social impact**
 
 [![Live Admin Portal](https://img.shields.io/badge/Live-Admin%20Portal-00D4AA?style=for-the-badge&logo=vercel)](https://iaudodidact.com/)
@@ -21,6 +23,14 @@
 - **E-commerce:** [inneranimals.com](https://inneranimals.com) - Online store (migrating to Vercel)
 - **Additional Domain:** [meauxxx.com](https://meauxxx.com) - Reserved for future use
 
+### 🏗️ Past Builds & Portfolio
+- **Spartans Command Center:** [inneranimal.github.io/spartans_command_center/](https://inneranimal.github.io/spartans_command_center/) - Meauxbility TRUTEC Stack showcase - https://inneranimal.github.io/fred/ ( best version so far of accurate meauxbility.org brand lol) 
+- **Swampblood.com** - Planned rebuild (repository pending)
+- **Fuelnfreetime.com** - Planned rebuild (repository pending)
+-Adelyn Cook Consulting - marketing application
+-Blair Mann - Mann Enterprise - c-corp - repo pending
+-Southern Pets Animal Rescue - repo pending
+-MsHippi.com - repo pending
 ---
 
 ## 🏗️ Monorepo Structure
@@ -28,10 +38,13 @@
 ```
 meauxbilityfoundation/.org/
 ├── 📱 apps/
-│   ├── admin-portal/          # Next.js 14 admin dashboard
-│   ├── meauxbility-org/       # Nonprofit website
-│   ├── inneranimals-shop/     # E-commerce platform
-│   └── api-gateway/           # Centralized API services
+│   ├── admin-portal/          # Next.js 14 admin dashboard (LIVE)
+│   ├── meauxbility-org/       # Nonprofit website (MIGRATING)
+│   ├── inneranimals-shop/     # E-commerce platform (MIGRATING)
+│   ├── spartans-command-center/ # TRUTEC Stack showcase (LIVE)
+│   ├── swampblood/            # Planned rebuild (PENDING)
+│   ├── fuelnfreetime/         # Planned rebuild (PENDING)
+│   └── api-gateway/           # Centralized API services (PLANNED)
 ├── 🛠️ packages/
 │   ├── ui-components/         # Shared React components
 │   ├── database-schemas/      # Supabase migrations
@@ -64,6 +77,10 @@ meauxbilityfoundation/.org/
 - **meauxbility.org** - Moving from Render to Vercel
 - **inneranimals.com** - Moving from current host to Vercel
 - **Asset Management** - Google Drive + Cloudflare R2 integration
+
+### 🔄 Planned Rebuilds
+- **swampblood.com** - Rebuilding with modern stack (Next.js, Supabase)
+- **fuelnfreetime.com** - Rebuilding with modern stack (Next.js, Supabase)
 
 ### 📋 Planned
 - **AI-Powered Workflows** - OpenAI + Claude integration
@@ -214,6 +231,7 @@ git push origin main
 - Donation processing
 - Volunteer opportunities
 - Accessibility resources
+- Grant application system
 
 ### 3. Inner Animals Shop (`/apps/inneranimals-shop`)
 **Status:** Migrating to Vercel
@@ -223,6 +241,33 @@ git push origin main
 - Shopping cart
 - Payment processing (Stripe)
 - Order management
+
+### 4. Spartans Command Center (`/apps/spartans-command-center`)
+**Status:** Live on GitHub Pages
+
+**Purpose:** Meauxbility TRUTEC Stack showcase
+- Technology stack demonstration
+- Grant statistics (50+ grants, $250K+ distributed)
+- 501(c)(3) nonprofit information
+- Acadiana region coverage
+
+**Live:** [inneranimal.github.io/spartans_command_center/](https://inneranimal.github.io/spartans_command_center/)
+
+### 5. Swampblood.com (`/apps/swampblood`)
+**Status:** Planned rebuild
+
+**Purpose:** TBD (repository pending)
+- Modern Next.js architecture
+- Supabase backend
+- Integrated with corporate monorepo
+
+### 6. Fuelnfreetime.com (`/apps/fuelnfreetime`)
+**Status:** Planned rebuild
+
+**Purpose:** TBD (repository pending)
+- Modern Next.js architecture
+- Supabase backend
+- Integrated with corporate monorepo
 
 ---
 
@@ -336,11 +381,20 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Meauxbility Foundation** is committed to creating accessible, innovative technology solutions that empower individuals and communities. Through our corporate monorepo, we maintain the highest standards of code quality, security, and user experience while advancing our mission of social impact through technology.
 
+### 📊 Impact Metrics
+- **50+ Grants Awarded** - Supporting spinal cord injury survivors
+- **$250K+ Funds Distributed** - Adaptive equipment and accessibility services
+- **100% Acadiana Coverage** - Serving Louisiana's Acadiana region
+- **24/7 Support Available** - Continuous assistance for our community
+
+### 🏛️ Legal Status
+- **501(c)(3) Nonprofit** - Tax-exempt charitable organization
+- **EIN:** 33-4214907
+- **Location:** Lafayette, Louisiana (Acadiana Region)
+
 ---
 
 **Built with ❤️ by the Meauxbility Foundation Team**
-
-*Last updated: December 2024*
 
 ## 👥 Team
 
@@ -353,7 +407,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For issues or questions:
 
 - Create an issue in this repository
-- Contact: info@meauxbility.org
+- Contact: sam@meauxbility.org
 - Slack: #admin-portal
 
 ---
